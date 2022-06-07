@@ -3,8 +3,6 @@ import {cardData} from '../Data/data'
 
 const Work = () => {
 
-    
-
   return (
     <div name='work' className='bg-[#0a192f] text-gray-300 w-full md:h-screen'>
         <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
@@ -15,7 +13,7 @@ const Work = () => {
 
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
                 {cardData.map((item) => (
-                    <div style={{backgroundImage: `url(${item.image})`}}  className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div">
+                    <div style={{backgroundImage: `url(${item.image})`}}  className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div hover:scale-105 duration-500">
                         
                         <div className="opacity-0 group-hover:opacity-100">
                             <span className='font-2xl font-bold text-white tracking-wider'>

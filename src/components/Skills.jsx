@@ -13,7 +13,7 @@ const Skills = () => {
 
             <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-4 text-center py-8">
                 {techData.map((item) => (
-                    <div className="shadow-md shadow-[#040c16] pt-4 rounded-2xl bg-[#0a1f39] hover:scale-110 duration-500" key={item.name}>
+                    <div className="shadow-md shadow-[#040c16] pt-4 rounded-2xl bg-[#0a1f39] hover:scale-110 duration-500 hover:bg-[#113663]" key={item.name}>
                         <img src={item.icon} alt={item.name} className='w-20 mx-auto' />
                         <p className='my-4'>{item.name}</p>
                     </div>

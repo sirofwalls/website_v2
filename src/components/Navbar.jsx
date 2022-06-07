@@ -3,6 +3,8 @@ import Logo from '../assets/logo.png'
 import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
+import {Link} from 'react-scroll'
+import { navDava } from '../Data/data'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -14,16 +16,21 @@ const Navbar = () => {
   return (
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
         <div className="">
-            <img src={Logo} alt="Logo" style={{width: '50px'}} />
+            <Link to='home' smooth={true} duration={500} className='cursor-pointer'>
+                <img src={Logo} alt="Logo" style={{width: '50px'}} />
+            </Link>
         </div>
 
         {/* Main Menu */}
         <ul className='hidden md:flex'>
-            <li>Home</li>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Work</li>
-            <li>Contact</li>
+            {navDava.map((item) => (
+                <li>
+                    <Link to={item.linkTo} smooth={true} duration={500}>
+                        {item.name}
+                    </Link>
+                </li>
+            ))}
+            
         </ul>
 
         {/* Mobile Menu */}
@@ -39,11 +46,13 @@ const Navbar = () => {
             ) : (
                 'hidden'
             )}>
-            <li className='py-6 text-4xl'>Home</li>
-            <li className='py-6 text-4xl'>About</li>
-            <li className='py-6 text-4xl'>Skills</li>
-            <li className='py-6 text-4xl'>Work</li>
-            <li className='py-6 text-4xl'>Contact</li>
+            {navDava.map((item) => (
+                <li className='py-6 text-4xl'>
+                    <Link to={item.linkTo} smooth={true} duration={500} onClick={toggleHamburger}>
+                        {item.name}
+                    </Link>
+                </li>
+            ))}
         </ul>
 
         {/* Social Icons */}

@@ -53,9 +53,17 @@ export const techData = [
     {name: 'Linux', icon: Linux},
     {name: 'Docker', icon: Docker},
     {name: 'MySQL', icon: MySQL},
+    {name: 'Mongo', icon: MongoDB},
     {name: 'NodeJS', icon: Node},
     {name: 'React', icon: ReactJS},
     {name: 'Cloudflare', icon: Cloudflare},
     {name: 'GitHub', icon: GitHub},
-    {name: 'Mongo', icon: MongoDB},
+]
+
+export const navDava = [
+    {name: 'Home', linkTo: 'home'},
+    {name: 'About', linkTo: 'about'},
+    {name: 'Skills', linkTo: 'skills'},
+    {name: 'Work', linkTo: 'work'},
+    {name: 'Contact', linkTo: 'contact'},
 ]
