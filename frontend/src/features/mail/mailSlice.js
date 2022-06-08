@@ -1,5 +1,7 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
-import mailService from './mailService'
+import axios from 'axios'
+
+const API_URL = '/api/v2/email/'
 
 const initialState = {
     mail: [],
@@ -12,7 +14,9 @@ const initialState = {
 // Send the mail
 export const sendMail = createAsyncThunk('mail/send', async (mailData, thunkAPI) => {
     try {
-        return await mailService.sendMail(mailData)
+        const response = await axios.post(API_URL, mailData)
+
+        return response.data
     } catch (error) {
         // Sends error as message if there was a problem
         const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString()
@@ -39,7 +43,7 @@ export const mailSlice = createSlice({
         .addCase(sendMail.rejected, (state, action) => {
             state.isLoading = false
             state.isError = true
-            state.message(action.payload)
+            state.message = action.payload
         })
     }
 })

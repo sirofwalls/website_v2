@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer')
 // Route: POST /api/v2/email
 // Access: Public to App Only
 const sendEmail = asyncHandler(async (req, res) => {
-    if (!req.body.name || !req.body.email || !req.body.message) {
+    if (!req.body.name || !req.body.email || !req.body.messageText) {
         res.status(400)
         throw new Error('Please enter the required data')
     }
@@ -14,7 +14,7 @@ const sendEmail = asyncHandler(async (req, res) => {
     const {
         name,
         email,
-        message
+        messageText
     } = req.body
 
     try {
@@ -48,7 +48,7 @@ const sendEmail = asyncHandler(async (req, res) => {
                         <p>Name: ${name}</p>
                         <p>E-Mail: ${email}</p>
                         <p>Message Details:</p>
-                        <p>${message}</p>
+                        <p>${messageText}</p>
                     </div>
                 </body>
             </html>
@@ -58,7 +58,7 @@ const sendEmail = asyncHandler(async (req, res) => {
                 Name: ${name}\n
                 E-Mail: ${email}\n
                 Message Details:\n
-                ${message}\n`
+                ${messageText}\n`
         })
 
         res.status(200).json({message: 'Email Sent!'})
