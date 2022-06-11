@@ -6,7 +6,7 @@ import Docker from '../assets/docker.png'
 import MySQL from '../assets/mysql.png'
 import ReactJS from '../assets/react.png'
 import Node from '../assets/node.png'
-import Cloudflare from '../assets/cloudflare.png'
+import Azure from '../assets/azure.png'
 import GitHub from '../assets/github.png'
 import MongoDB from '../assets/mongo.png'
 
@@ -51,13 +51,13 @@ export const cardData = [
 
 export const techData = [
     {name: 'Linux', icon: Linux},
+    {name: 'Azure', icon: Azure},
     {name: 'Docker', icon: Docker},
+    {name: 'GitHub', icon: GitHub},
     {name: 'MySQL', icon: MySQL},
     {name: 'Mongo', icon: MongoDB},
     {name: 'NodeJS', icon: Node},
     {name: 'React', icon: ReactJS},
-    {name: 'Cloudflare', icon: Cloudflare},
-    {name: 'GitHub', icon: GitHub},
 ]
 
 export const navDava = [

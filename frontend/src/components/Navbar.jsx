@@ -2,7 +2,6 @@ import {useState} from 'react'
 import Logo from '../assets/logo.png'
 import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
-import {BsFillPersonLinesFill} from 'react-icons/bs'
 import {Link} from 'react-scroll'
 import { navDava } from '../Data/data'
 
@@ -15,17 +14,17 @@ const Navbar = () => {
 
   return (
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
-        <div className="">
+        <div className="lg:mx-4">
             <Link to='home' smooth={true} duration={500} className='cursor-pointer'>
-                <img src={Logo} alt="Logo" style={{width: '50px'}} />
+                <img className='hover:scale-110 duration-300' src={Logo} alt="Logo" style={{width: '50px'}} />
             </Link>
         </div>
 
         {/* Main Menu */}
         <ul className='hidden md:flex'>
             {navDava.map((item) => (
-                <li>
-                    <Link to={item.linkTo} smooth={true} duration={500}>
+                <li key={item.linkTo}>
+                    <Link className='hover:border-b-4 hover:border-pink-600' to={item.linkTo} smooth={true} duration={500}>
                         {item.name}
                     </Link>
                 </li>
@@ -47,8 +46,8 @@ const Navbar = () => {
                 'hidden'
             )}>
             {navDava.map((item) => (
-                <li className='py-6 text-4xl'>
-                    <Link to={item.linkTo} smooth={true} duration={500} onClick={toggleHamburger}>
+                <li className='py-6 text-4xl' key={item.linkTo}>
+                    <Link className='hover:border-b-4 hover:border-pink-600' to={item.linkTo} smooth={true} duration={500} onClick={toggleHamburger}>
                         {item.name}
                     </Link>
                 </li>
@@ -59,16 +58,13 @@ const Navbar = () => {
         <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
             <ul>
                 <li className='w-[150px] h-[50px] flex justify-between items-center ml-[-90px] hover:ml-[-10px] duration-300 bg-blue-600'>
-                    <a className='flex justify-between items-center w-full text-gray-300' href="/">LinkedIn <FaLinkedin size={30} /></a>
+                    <a className='flex justify-between items-center w-full text-gray-300' href="https://www.linkedin.com/in/peter-walser">LinkedIn <FaLinkedin size={30} /></a>
                 </li>
                 <li className='w-[150px] h-[50px] flex justify-between items-center ml-[-90px] hover:ml-[-10px] duration-300 bg-[#333]'>
-                    <a className='flex justify-between items-center w-full text-gray-300' href="/">GitHub <FaGithub size={30} /></a>
+                    <a className='flex justify-between items-center w-full text-gray-300' href="https://github.com/sirofwalls">GitHub <FaGithub size={30} /></a>
                 </li>
                 <li className='w-[150px] h-[50px] flex justify-between items-center ml-[-90px] hover:ml-[-10px] duration-300 bg-[#68938a]'>
-                    <a className='flex justify-between items-center w-full text-gray-300' href="/">Email <HiOutlineMail size={30} /></a>
-                </li>
-                <li className='w-[150px] h-[50px] flex justify-between items-center ml-[-90px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
-                    <a className='flex justify-between items-center w-full text-gray-300' href="/">Resume <BsFillPersonLinesFill size={30} /></a>
+                    <a className='flex justify-between items-center w-full text-gray-300' href="mailto:mail@ptrwlsr.com">Email <HiOutlineMail size={30} /></a>
                 </li>
             </ul>
         </div>

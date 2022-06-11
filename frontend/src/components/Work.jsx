@@ -13,7 +13,7 @@ const Work = () => {
 
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
                 {cardData.map((item) => (
-                    <div style={{backgroundImage: `url(${item.image})`}}  className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div hover:scale-105 duration-500">
+                    <div style={{backgroundImage: `url(${item.image})`}} className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div hover:scale-105 duration-500" key={item.title}>
                         
                         <div className="opacity-0 group-hover:opacity-100">
                             <span className='font-2xl font-bold text-white tracking-wider'>
