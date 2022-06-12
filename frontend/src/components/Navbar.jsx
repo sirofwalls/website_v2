@@ -13,7 +13,7 @@ const Navbar = () => {
     }
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
+    <div className='z-50 fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
         <div className="lg:mx-4">
             <Link to='home' smooth={true} duration={500} className='cursor-pointer'>
                 <img className='hover:scale-110 duration-300' src={Logo} alt="Logo" style={{width: '50px'}} />
