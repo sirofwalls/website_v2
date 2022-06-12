@@ -26,7 +26,7 @@ const Work = () => {
     }, [inView, animation])
 
   return (
-    <div ref={ref} name='work' className='overflow-x-hidden bg-[#0a192f] text-gray-300 w-full pt-40 md:min-h-screen md:pt-8'>
+    <div ref={ref} name='work' className='overflow-x-hidden bg-[#0a192f] text-gray-300 w-full pt-40 md:min-h-screen md:pt-16'>
         <motion.div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full" initial={{x: '-100vw', opacity: 0}} animate={animation}>
             <div className="pb-8">
                 <p className='text-4xl font-bold inline border-b-4 border-pink-600'>Work</p>
