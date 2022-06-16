@@ -17,37 +17,43 @@ import MongoDB from '../assets/mongo.png'
 
 export const cardData = [
     {
-        title: 'Work Order Tracking',
+        title: 'Work Orders',
+        description: 'An app to track workorders for users in the field',
         demoLink: 'https://workorder.ptrwlsr.io/',
         codeLink: 'https://github.com/sirofwalls/workorder-tracker',
         image: Workorder,
     },
     {
-        title: 'Basic Task App',
+        title: 'Task App',
+        description: 'A basic Task app/crud app with on database',
         demoLink: 'https://tasks.ptrwlsr.io/',
         codeLink: 'https://github.com/sirofwalls/task-app',
         image: Taskapp,
     },
     {
-        title: 'Cerberus Managment Discord Bot',
+        title: 'Cerberus Discord Bot',
+        description: 'Discord management bot for the Knights of Cerberus gaming community',
         demoLink: 'https://discord.gg/qE3GtKGbuU',
         codeLink: 'https://github.com/sirofwalls/cerberus-beta',
         image: Cerberus,
     },
     {
         title: 'Callisto Music Discord Bot',
+        description: 'Music searching and playing Discord bot for the Ghostknife of Callisto gaming community',
         demoLink: 'https://discord.gg/qE3GtKGbuU',
         codeLink: 'https://github.com/sirofwalls/calisto-music',
         image: Callisto,
     },
     {
         title: 'Fifth',
+        description: '',
         demoLink: '/',
         codeLink: 'https://github.com',
         image: WorkImg,
     },
     {
         title: 'Sixth',
+        description: '',
         demoLink: '/',
         codeLink: 'https://github.com',
         image: RealEstate,
