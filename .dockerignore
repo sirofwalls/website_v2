@@ -1,0 +1,7 @@
+node_modules/
+.env
+*.example
+package-lock.json
+frontend/build/
+frontend/package-lock.json
+frontend/node_modules/
