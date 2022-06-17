@@ -1,6 +1,3 @@
-import RealEstate from '../assets/realestate.jpg'
-import WorkImg from '../assets/workImg.jpeg'
-
 import Workorder from '../assets/workorder-app.png'
 import Taskapp from '../assets/tasklist.png'
 import Cerberus from '../assets/cerberus.jpg'
@@ -43,20 +40,6 @@ export const cardData = [
         demoLink: 'https://discord.gg/qE3GtKGbuU',
         codeLink: 'https://github.com/sirofwalls/calisto-music',
         image: Callisto,
-    },
-    {
-        title: 'Fifth',
-        description: '',
-        demoLink: '/',
-        codeLink: 'https://github.com',
-        image: WorkImg,
-    },
-    {
-        title: 'Sixth',
-        description: '',
-        demoLink: '/',
-        codeLink: 'https://github.com',
-        image: RealEstate,
     },
 ]
 

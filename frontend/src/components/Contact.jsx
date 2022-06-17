@@ -29,7 +29,7 @@ const Contact = () => {
 
   useEffect(() => {
 
-    if (isSuccess) {
+    if (isSuccess && !mailSent) {
       toast.success(message.message, {
         position: "bottom-center",
         autoClose: 10000,
@@ -41,7 +41,7 @@ const Contact = () => {
         });
     }
   
-    if (isError) {
+    if (isError && !mailSent) {
       toast.error(message.message, {
         position: "bottom-center",
         autoClose: 5000,
